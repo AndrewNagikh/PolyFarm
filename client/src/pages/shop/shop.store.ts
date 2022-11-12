@@ -5,7 +5,8 @@ export interface Item {
     name: string,
     description: string,
     image: string,
-    category: string
+    category: string,
+    amount: number,
 }
 
 export const items1: Item[] = [];
@@ -18,7 +19,8 @@ const generateItems = (num: number) => {
             name: faker.commerce.product(),
             description: faker.commerce.productDescription(),
             category: faker.commerce.department(),
-            image: faker.image.cats(640, 480, true)
+            image: faker.image.cats(640, 480, true),
+            amount: Number(faker.random.numeric(5)),
         }
         items1.push(item)
     }
@@ -27,7 +29,8 @@ const generateItems = (num: number) => {
             name: faker.commerce.product(),
             description: faker.commerce.productDescription(),
             category: faker.commerce.department(),
-            image: faker.image.cats(640, 480, true)
+            image: faker.image.cats(640, 480, true),
+            amount: Number(faker.random.numeric(5)),
         }
         items2.push(item)
     }
@@ -36,7 +39,8 @@ const generateItems = (num: number) => {
             name: faker.commerce.product(),
             description: faker.commerce.productDescription(),
             category: faker.commerce.department(),
-            image: faker.image.cats(640, 480, true)
+            image: faker.image.cats(640, 480, true),
+            amount: Number(faker.random.numeric(5)),
         }
         items3.push(item)
     }
